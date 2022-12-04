@@ -1,0 +1,22 @@
+
+from tkinter import *
+import random
+
+root=Tk()
+root.title("Foods I like")
+root.geometry("500x500")
+
+list1 = ["Apple", "Pizza", "Rasberry", "Tim Tams" , "Icey Poles" ]
+print(list1)
+
+def random_number():
+    random_no = random.randint(0,4)
+    print(random_no)
+    random_way_to_die_in_minecraft = list1[random_no]
+    print("I ate " +   random_way_to_die_in_minecraft)
+    
+    
+btn1 = Button(root, text="What did I eat? ", command = random_number)
+btn1.place(relx= 0.5,rely = 0.5, anchor = CENTER )
+
+root.mainloop()
